@@ -14,7 +14,7 @@ https://github.com/ArtemLeo/image-classification-web-app/assets/105164053/420ef9
 ## How to Use the Web App:
 - Upload an input image to the web app.
 - The app will classify the image using the pre-trained ResNet50 model.
-- The predicted class label and the probability of the prediction will be displayed.
+- The predicted class label and the prediction probability will be displayed.
 
 ### 🏞 Docker Image:
 ![im_2](readme_images/img_2.png)

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <title>Image_Classification</title>
+  <style>
+      body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f5f5f5;
+      }
+
+      h1 {
+          text-align: center;
+      }
+
+      .container {
+          text-align: center;
+      }
+
+      .image-input {
+          width: 300px;
+          height: 200px;
+          border: 2px dashed #b3e0ff;
+          background-color: #e6f2ff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto 20px;
+          border-radius: 5px;
+          position: relative;
+      }
+
+      input[type="file"] {
+          display: none;
+      }
+
+      .image-input label {
+          cursor: pointer;
+          font-size: 16px;
+          color: #666;
+      }
+
+      input[type="submit"] {
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+
+      .result {
+          margin-top: 20px;
+          font-size: 25px;
+          font-weight: bold;
+      }
+
+      #image-preview {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 90%;
+          max-height: 90%;
+          display: none;
+      }
+  </style>
+  <script>
+      function previewImage(event) {
+          let reader = new FileReader();
+          reader.onload = function () {
+              let output = document.getElementById('image-preview');
+              output.src = reader.result;
+              output.style.display = 'block';
+          }
+          reader.readAsDataURL(event.target.files[0]);
+      }
+  </script>
+</head>
+<body>
+<h1>Image Classification using ResNet50</h1>
+<div class="container">
+  <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload') }}">
+    <div class="image-input">
+      <label for="photo">Select an image</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required onchange="previewImage(event)">
+      <img id="image-preview" src="#" alt="Preview">
+    </div>
+    <input type="submit" value="Classify">
+  </form>
+  <div class="result">
+    The prediction is: {{ prediction }} <br><br>
+    With probability: {{ percentage }}
+  </div>
+</div>
+</body>
+</html>

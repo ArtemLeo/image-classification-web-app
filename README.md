@@ -1,15 +1,15 @@
 <h1>Image Classification Web App Using ResNet50 with Flask and Docker ⚽️🚘✈️🦮</h1>
 
-## Project Demo Video:
-https://github.com/ArtemLeo/image-classification-web-app/assets/105164053/420ef963-5837-4930-8829-ab5b0a50cc02
-
-<ul>
-   <li>This Flask project is a web app for classifying images.</li>
-   <li>It uses a pre-trained ResNet50 model from the Keras library for image classification.</li>
-</ul>
-
 ### 🏞 Project Image:
 ![im_1](readme_images/img_1.png)
+
+<ul>
+   <li>This Flask project is a web app for classifying images.<strong></li>
+   <li><strong>It uses a pre-trained ResNet50 model from the Keras library for image classification.<strong></li>
+</ul>
+
+## Project Demo Video:
+https://github.com/ArtemLeo/image-classification-web-app/assets/105164053/420ef963-5837-4930-8829-ab5b0a50cc02
 
 ## How to Use the Web App:
 - Upload an input image to the web app.

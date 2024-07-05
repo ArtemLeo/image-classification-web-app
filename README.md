@@ -4,7 +4,7 @@
 ![im_1](readme_images/img_1.png)
 
 <ul>
-   <li>This Flask project is a web app for classifying images.<strong></li>
+   <li><strong>This Flask project is a web app for classifying images.<strong></li>
    <li><strong>It uses a pre-trained ResNet50 model from the Keras library for image classification.<strong></li>
 </ul>
 

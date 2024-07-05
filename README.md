@@ -1,6 +1,6 @@
 <h1>Image Classification Web App Using ResNet50 with Flask and Docker ⚽️🚘✈️🦮</h1>
 
-## Demo
+## Project Demo Video:
 https://github.com/ArtemLeo/image-classification-web-app/assets/105164053/367ddf60-d270-4cc8-a8cb-6b2380566b34
 
 <ul>
